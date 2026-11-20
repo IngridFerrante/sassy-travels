@@ -68,10 +68,7 @@
         <article class="feature-card feature-itinerary"><div class="feature-topline"><span>FOUR STOPS</span><span aria-hidden="true">↗</span></div><h3>Milano to Roma.</h3><p>Explore the character, culture and cuisine of four remarkable cities.</p><button class="text-link" type="button" data-section="itinerary">Open the itinerary <span aria-hidden="true">→</span></button></article>
         <article class="feature-card feature-budget"><div class="feature-topline"><span>TRAVEL INSPIRATION</span><span aria-hidden="true">▤</span></div><h3>${trip.files.length} guide editions.</h3><p>Browse public travel guides to city highlights, food, art and shopping.</p><button class="text-link" type="button" data-section="files">Open the library <span aria-hidden="true">→</span></button></article>
       </div>
-      <div class="editorial-grid">
-        <article class="travel-note"><span class="card-label">A TRAVEL NOTE</span><blockquote>${escapeHtml(trip.note)}</blockquote></article>
-        <aside class="trip-facts"><span class="card-label">THE ROUTE</span><strong>Italia, con amore.</strong><dl><div><dt>Start exploring</dt><dd>Milano</dd></div><div><dt>Keep wandering</dt><dd>Modena & Napoli</dd></div><div><dt>Make time for</dt><dd>Roma</dd></div></dl><div class="trip-facts-actions"><button class="text-link" type="button" data-section="files">Browse the travel guides <span aria-hidden="true">→</span></button></div></aside>
-      </div>`;
+      <aside class="trip-facts trip-facts--standalone"><span class="card-label">THE ROUTE</span><strong>Italia, con amore.</strong><dl><div><dt>Start exploring</dt><dd>Milano</dd></div><div><dt>Keep wandering</dt><dd>Modena & Napoli</dd></div><div><dt>Make time for</dt><dd>Roma</dd></div></dl><div class="trip-facts-actions"><button class="text-link" type="button" data-section="files">Browse the travel guides <span aria-hidden="true">→</span></button></div></aside>`;
   }
 
   function itineraryTemplate() {
