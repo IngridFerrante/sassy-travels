@@ -126,7 +126,13 @@
       ${sectionHeading("YOUR TRAVEL FOLDER", "Every file, close at hand.", `${trip.files.length} public guide editions · select a file to open.`)}
       <p class="document-privacy"><span aria-hidden="true">●</span> These general travel guides are public. Keep personal bookings and travel documents private.</p>
       <div class="file-filters" aria-label="Filter documents">${filters}</div>
-      <div class="document-grid">${visibleFiles.map(documentTemplate).join("")}</div>`;
+      <div class="document-grid">${visibleFiles.map(documentTemplate).join("")}</div>
+      <article class="document-card" aria-label="Private travel documents">
+        <div class="document-card-top"><span class="document-icon" aria-hidden="true">LOCK</span><span class="bucket-tag">PRIVATE · ONEDRIVE</span></div>
+        <h3>Your private travel documents</h3>
+        <p>Opens your OneDrive folder. Access is restricted to your account; other visitors must sign in and have permission.</p>
+        <a class="document-open" href="https://1drv.ms/f/c/cc14f3ee608c32e8/IgAZzcgCr5kGQIxrGMJxn7T-Af7ukY1H8b6fEqWakt68Sj4?e=2UdDa5" target="_blank" rel="noopener noreferrer">Open private folder <span aria-hidden="true">↗</span></a>
+      </article>`;
   }
 
   function readChecklist() {
