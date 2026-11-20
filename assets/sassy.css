@@ -1,7 +1,7 @@
 .app-shell { display: block; max-width: none; }
 
 .trip-hero {
-  --hero-image: url("./italy-hero.jpg");
+  --hero-image: url("./napoli-hero.jpg");
   background-image:
     linear-gradient(90deg, rgba(17, 26, 21, .5) 0%, rgba(17, 26, 21, .16) 72%, rgba(17, 26, 21, .08) 100%),
     linear-gradient(0deg, rgba(17, 26, 21, .68) 0%, rgba(17, 26, 21, .12) 59%, rgba(17, 26, 21, .04) 100%),
@@ -48,6 +48,8 @@
 .document-open:hover { border-color: rgba(112, 132, 119, .32); background: #e9eee8; }
 .document-open span { color: var(--terracotta); }
 .document-card:focus-within, .city-card:focus-within { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+.page-footer .image-credit { display: block; margin-top: 7px; font-size: 9px; font-weight: 500; letter-spacing: 0; line-height: 1.5; text-transform: none; }
+.page-footer .image-credit a { color: inherit; text-decoration: underline; }
 .search-result { text-decoration: none; }
 .search-result button { font: inherit; }
 

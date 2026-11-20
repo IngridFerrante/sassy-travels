@@ -18,3 +18,7 @@ Personal travel attachments (flight, hotel, train and restaurant confirmations) 
 - `app.js`: navigation, document filters, search and guide rendering.
 - `assets/sassy.css`: Italy-specific components; `assets/styles.css` provides the responsive design.
 - `docs/`: sanitized GitHub Pages build; contains only public site files and general travel guides.
+
+## Image credit
+
+The Naples hero photo, [Castel Sant'Elmo](https://commons.wikimedia.org/wiki/File:Castel_Sant%27Elmo._0032.jpg), is by Giuseppe Guida and shared under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
