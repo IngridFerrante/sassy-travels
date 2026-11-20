@@ -107,7 +107,7 @@
   function documentTemplate(file) {
     const encodedName = encodeURIComponent(file.name);
     const isWord = file.name.endsWith(".docx");
-    const action = isWord ? "Baixar documento" : "Abrir documento";
+    const action = isWord ? "Download guide" : "Open PDF";
     return `<article class="document-card" id="${fileId(file)}" data-document-search>
       <div class="document-card-top"><span class="document-icon" aria-hidden="true">${isWord ? "W" : "PDF"}</span><span class="bucket-tag">${escapeHtml(file.category)}</span></div>
       <h3>${escapeHtml(file.name)}</h3><p>${escapeHtml(file.description)}</p>
@@ -123,8 +123,8 @@
     const visibleFiles = activeFileCategory === "All" ? trip.files : trip.files.filter((file) => file.category === activeFileCategory);
     const filters = fileCategories.map((category) => `<button class="file-filter ${activeFileCategory === category ? "is-active" : ""}" type="button" data-file-category="${escapeHtml(category)}" aria-pressed="${activeFileCategory === category}">${escapeHtml(category)}<span>${category === "All" ? trip.files.length : trip.files.filter((file) => file.category === category).length}</span></button>`).join("");
     return `
-      ${sectionHeading("YOUR TRAVEL FOLDER", "Every file, close at hand.", `${trip.files.length} original documents · select a file to open.`)}
-      <p class="document-privacy"><span aria-hidden="true">●</span> Travel documents may contain personal information. Keep this folder and repository private.</p>
+      ${sectionHeading("YOUR TRAVEL FOLDER", "Every file, close at hand.", `${trip.files.length} public guide editions · select a file to open.`)}
+      <p class="document-privacy"><span aria-hidden="true">●</span> These general travel guides are public. Keep personal bookings and travel documents private.</p>
       <div class="file-filters" aria-label="Filter documents">${filters}</div>
       <div class="document-grid">${visibleFiles.map(documentTemplate).join("")}</div>`;
   }
@@ -148,7 +148,7 @@
           <input type="checkbox" data-essential="${index}" ${checked.includes(index) ? "checked" : ""} aria-label="Mark ${escapeHtml(item.title)} as checked">
           <span class="check-visual" aria-hidden="true">✓</span><span><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.detail)}</small></span>
         </label>`).join("")}</div>
-        <aside class="culture-card"><span class="culture-icon" aria-hidden="true">✳</span><span class="card-label">A FRIENDLY REMINDER</span><p>Your original documents are the source for booking times, names and addresses.</p><button class="text-link" type="button" data-section="files">Open your files <span aria-hidden="true">→</span></button></aside>
+        <aside class="culture-card"><span class="culture-icon" aria-hidden="true">✳</span><span class="card-label">A FRIENDLY REMINDER</span><p>Check your private booking confirmations for personal travel times and details.</p><button class="text-link" type="button" data-section="files">Browse public guides <span aria-hidden="true">→</span></button></aside>
       </div>
       <p class="disclaimer">Your checklist is saved only in this browser on this device.</p>`;
   }
