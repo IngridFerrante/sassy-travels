@@ -1,4 +1,4 @@
-# Sassy Travels - Italy
+# Sarine e amici - Italy
 
 A responsive, English-language travel guide for sharing Italian city highlights, general itinerary inspiration and recommendations for Milano, Modena, Napoli and Roma.
 
