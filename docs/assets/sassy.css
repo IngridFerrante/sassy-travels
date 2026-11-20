@@ -1,0 +1,69 @@
+.app-shell { display: block; max-width: none; }
+
+.trip-hero {
+  --hero-image: url("./italy-hero.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(17, 26, 21, .5) 0%, rgba(17, 26, 21, .16) 72%, rgba(17, 26, 21, .08) 100%),
+    linear-gradient(0deg, rgba(17, 26, 21, .68) 0%, rgba(17, 26, 21, .12) 59%, rgba(17, 26, 21, .04) 100%),
+    var(--hero-image);
+}
+
+.page-content { width: min(calc(100% - 40px), 1230px); margin: 0 auto; }
+.section-heading { scroll-margin-top: 148px; }
+.city-grid, .document-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.city-card, .document-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(255, 254, 250, .96), rgba(247, 246, 240, .9));
+  box-shadow: 0 9px 28px rgba(39, 45, 38, .045);
+}
+
+.city-card-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.city-card-heading h3 { margin: 5px 0 0; font-family: var(--serif); font-size: 31px; font-weight: 600; line-height: 1; }
+.city-date { color: var(--muted); font-size: 9px; font-weight: 750; letter-spacing: .04em; }
+.city-intro { margin: 12px 0 18px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.city-categories { display: grid; gap: 14px; }
+.city-category { padding-top: 12px; border-top: 1px solid var(--line); }
+.city-category h4 { margin: 0; color: var(--teal-deep); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.city-category ul { display: grid; gap: 5px; margin: 8px 0 0; padding-left: 17px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.city-note { display: flex; gap: 8px; align-items: flex-start; margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.65; }
+.city-note span { flex: 0 0 auto; color: var(--terracotta); }
+.brands-note { margin-top: 12px; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: #eeeee8; }
+.brands-note p { margin: 10px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+
+.document-privacy { margin: -4px 0 14px; padding: 11px 13px; border: 1px solid rgba(182, 120, 95, .19); border-radius: 9px; background: rgba(182, 120, 95, .07); color: var(--muted); font-size: 10px; line-height: 1.6; }
+.document-privacy span { margin-right: 6px; color: var(--terracotta); font-size: 8px; }
+.file-filters { display: flex; gap: 7px; overflow-x: auto; margin: 0 0 13px; padding: 2px 1px 5px; scrollbar-width: thin; }
+.file-filter { display: inline-flex; min-height: 36px; flex: 0 0 auto; align-items: center; gap: 7px; padding: 0 11px; border: 1px solid var(--line); border-radius: 999px; background: #fffefa; color: var(--muted); font-size: 9px; font-weight: 750; cursor: pointer; }
+.file-filter.is-active { border-color: rgba(112, 132, 119, .23); background: #e9eee8; color: var(--teal-deep); }
+.file-filter span { color: var(--terracotta); font-size: 8px; }
+.document-card { display: flex; flex-direction: column; min-height: 194px; }
+.document-card-top { display: flex; justify-content: space-between; align-items: center; }
+.document-icon { display: grid; min-width: 33px; height: 33px; place-items: center; padding: 0 6px; border: 1px solid rgba(112, 132, 119, .2); border-radius: 10px; background: #e9eee8; color: var(--teal-deep); font-size: 8px; font-weight: 800; }
+.document-card h3 { margin: 15px 0 0; overflow-wrap: anywhere; color: var(--ink); font-size: 11px; font-weight: 750; line-height: 1.5; }
+.document-card > p { margin: 7px 0 15px; color: var(--muted); font-size: 10px; line-height: 1.65; }
+.document-open { display: inline-flex; min-height: 37px; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding: 0 11px; border: 1px solid var(--line); border-radius: 8px; color: var(--teal-deep); font-size: 9px; font-weight: 800; text-decoration: none; }
+.document-open:hover { border-color: rgba(112, 132, 119, .32); background: #e9eee8; }
+.document-open span { color: var(--terracotta); }
+.document-card:focus-within, .city-card:focus-within { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+.search-result { text-decoration: none; }
+.search-result button { font: inherit; }
+
+@media (min-width: 640px) {
+  .document-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .city-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .document-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+  .page-content { width: calc(100% - 32px); }
+  .section-heading { scroll-margin-top: 82px; }
+  .city-card, .document-card { padding: 16px; }
+  .city-card-heading h3 { font-size: 28px; }
+  .document-card { min-height: 184px; }
+}
