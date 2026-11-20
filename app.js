@@ -51,18 +51,18 @@
       { icon: "↗", label: "GETTING AROUND", value: "Trains, metro & exploring on foot" },
       { icon: "▤", label: "TRAVEL GUIDE", value: `${trip.files.length} city guide editions` }
     ];
-    const highlights = [
-      { tag: "ARTS & CULTURE", title: "A night at La Scala", detail: "Discover the history and world-class performances at Teatro alla Scala." },
-      { tag: "HISTORY & FOOD", title: "A taste of Modena", detail: "Sample regional flavors and admire the city's historic center." },
-      { tag: "ARTISAN TRADITIONS", title: "Explore Napoli", detail: "Find local workshops among the city's historic streets." },
-      { tag: "ANCIENT HISTORY", title: "Take your time in Roma", detail: "Visit ancient sites, museums and welcoming neighborhood restaurants." }
+    const phrases = [
+      { tag: "GREETINGS", phrase: "Buongiorno", meaning: "Good morning / hello" },
+      { tag: "PLEASE", phrase: "Per favore", meaning: "Please" },
+      { tag: "THANK YOU", phrase: "Grazie", meaning: "Thank you" },
+      { tag: "AT THE RESTAURANT", phrase: "Il conto, per favore", meaning: "The bill, please" }
     ];
     return `
       ${sectionHeading("CIAO, ITALIA", "A journey through four cities.", "A curated itinerary, local recommendations and an Italian city guide to keep close.")}
       <div class="overview-grid overview-grid--4">${cards.map((card) => `<article class="overview-card"><span class="overview-icon" aria-hidden="true">${card.icon}</span><span class="card-label">${card.label}</span><strong>${escapeHtml(card.value)}</strong></article>`).join("")}</div>
       <section class="highlights-section" aria-labelledby="highlights-title">
-        <div class="section-heading"><div><span class="eyebrow">CONFIRMED MOMENTS</span><h2 id="highlights-title">The journey is already underway.</h2></div></div>
-        <div class="highlights-grid">${highlights.map((item, index) => `<button class="highlight-card" type="button" data-section="itinerary" data-focus-day="${index}"><span class="highlight-number" aria-hidden="true">0${index + 1}</span><span class="bucket-tag">${item.tag}</span><strong>${escapeHtml(item.title)}</strong><span class="bucket-detail">${escapeHtml(item.detail)}</span><span class="highlight-link">View the itinerary <span aria-hidden="true">↗</span></span></button>`).join("")}</div>
+        <div class="section-heading"><div><span class="eyebrow">USEFUL ITALIAN</span><h2 id="highlights-title">A few words go a long way.</h2></div></div>
+        <div class="highlights-grid">${phrases.map((item) => `<article class="highlight-card highlight-card--static" lang="it"><span class="bucket-tag">${item.tag}</span><strong>${escapeHtml(item.phrase)}</strong><span class="bucket-detail" lang="en">${escapeHtml(item.meaning)}</span></article>`).join("")}</div>
       </section>
       <div class="feature-grid">
         <article class="feature-card feature-itinerary"><div class="feature-topline"><span>FOUR STOPS</span><span aria-hidden="true">↗</span></div><h3>Milano to Roma.</h3><p>Explore the character, culture and cuisine of four remarkable cities.</p><button class="text-link" type="button" data-section="itinerary">Open the itinerary <span aria-hidden="true">→</span></button></article>

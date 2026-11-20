@@ -978,7 +978,7 @@ body {
 @media (min-width: 900px) {
   .trip-hero { margin-right: 24px; margin-left: 24px; }
   .overview-card { padding-left: 58px; }
-  .highlights-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .highlights-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .highlight-card { min-height: 280px; padding: 28px; }
   .bucket-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .day-content { padding: 20px 24px 14px; }
